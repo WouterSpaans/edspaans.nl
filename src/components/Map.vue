@@ -15,7 +15,7 @@ export default {
       OwntracksDevice: 'samsung-ed',
       OwntracksFielde: 'tst,lat,lon,acc',
       OwntracksFrom: '2018-03-21T09:06:00Z',
-      OwntracksTo: '',
+      OwntracksTo: '2018-04-25T22:06:00Z',
       OwntracksCoordinates: [],
       google: null
     }
@@ -71,14 +71,16 @@ export default {
       // Draw all markers
       let daynumber = 0
       markerIndexes.forEach(index => {
-        const coord = filteredCoords[index]
-        // eslint-disable-next-line
-        let marker = new google.maps.Marker({
+        if (daynumber !== 11) {
+          const coord = filteredCoords[index]
           // eslint-disable-next-line
-          position: new google.maps.LatLng(coord.lat, coord.lon),
-          label: daynumber.toString(),
-          map: map
-        })
+          let marker = new google.maps.Marker({
+            // eslint-disable-next-line
+            position: new google.maps.LatLng(coord.lat, coord.lon),
+            label: daynumber.toString(),
+            map: map
+          })
+        }
         daynumber++
       })
     }
