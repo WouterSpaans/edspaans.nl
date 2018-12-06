@@ -10,7 +10,7 @@ export default {
   name: 'Map',
   data () {
     return {
-      OwntracksBase: 'http://owntracks.edspaans.nl/owntracks/api/0/locations',
+      OwntracksBase: 'https://owntracks.edspaans.nl/owntracks/api/0/locations',
       OwntracksUser: 'wouter',
       OwntracksDevice: 'samsung-ed',
       OwntracksFielde: 'tst,lat,lon,acc',
